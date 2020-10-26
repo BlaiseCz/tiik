@@ -35,12 +35,12 @@ public class Lab1Presentator {
     }
 
     @SneakyThrows
-    public void saveToCSV(Map<Character, Integer> stringIntegerMap, String fileName) {
+    private void saveToCSV(Map<Character, Integer> stringIntegerMap, String fileName) {
         List<List<String>> rows = new ArrayList<>();
         rows.add(Arrays.asList("Znak", "Częstość wystąpień"));
 
-        stringIntegerMap
-                .forEach((k,v) -> rows.add(Arrays.asList(String.valueOf(k), String.valueOf(v))));
+        Converter.getMapProperlySorted(stringIntegerMap)
+                .forEach(el -> rows.add(Arrays.asList(String.valueOf(el.getKey()), String.valueOf(el.getValue()))));
 
 
         String resultFileName = String.format("%s_result.csv", fileName);

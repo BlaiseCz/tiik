@@ -7,7 +7,8 @@ import java.util.Map;
 @Slf4j
 public class Printer {
     public static void print(Map<Character, Integer> map) {
-        map.forEach((k, v) -> System.out.println(getStringToPrint(k, v)));
+        Converter.getMapProperlySorted(map)
+                .forEach(el -> System.out.println(getStringToPrint(el.getKey(), el.getValue())));
     }
 
     private static String getStringToPrint(Character character, Integer amount) {
