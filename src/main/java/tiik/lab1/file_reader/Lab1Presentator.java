@@ -4,10 +4,7 @@ import lombok.SneakyThrows;
 
 import java.io.FileWriter;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class Lab1Presentator {
@@ -23,31 +20,36 @@ public class Lab1Presentator {
         System.out.println(EntropyCalculator.calculate(stringIntegerMap, length));
 
         System.out.println("Częstość wystąpień:");
-        Printer.print(EntropyCalculator.getCharacterDetailsList());
+        List<CharacterDetails> characterDetailsList = EntropyCalculator.getCharacterDetailsList();
+        Printer.print(characterDetailsList);
 
         String fileName = Path.of(filePath)
-                       .getFileName()
-                       .toString()
-                       .split("\\.")[0];
-        saveToCSV(stringIntegerMap, fileName);
+                .getFileName()
+                .toString()
+                .split("\\.")[0];
+        saveToCSV(characterDetailsList, fileName);
     }
 
-    public void present(String...filePaths) {
+    public void present(String... filePaths) {
         Stream.of(filePaths)
-              .forEach(this::present);
+                .forEach(this::present);
     }
 
     @SneakyThrows
-    private void saveToCSV(Map<Character, Integer> stringIntegerMap, String fileName) {
+    private void saveToCSV(List<CharacterDetails> characterDetailsList, String fileName) {
         List<List<String>> rows = new ArrayList<>();
-        rows.add(Arrays.asList("Znak", "Częstość wystąpień"));
+        rows.add(Arrays.asList("Znak", "Ilość wystąpień", "Prawdopodobieństwo", "Entropia"));
 
-        Converter.getMapProperlySorted(stringIntegerMap)
-                .forEach(el -> rows.add(Arrays.asList(String.valueOf(el.getKey()), String.valueOf(el.getValue()))));
-
+        Comparator<CharacterDetails> compareByCharacter = Comparator.comparing(CharacterDetails::getCharacter);
+        characterDetailsList.sort(compareByCharacter);
 
         String resultFileName = String.format("%s_result.csv", fileName);
         FileWriter csvWriter = new FileWriter(resultFileName);
+
+        for (CharacterDetails elem : characterDetailsList) {
+            rows.add(Arrays.asList(String.valueOf(elem.getCharacter()), String.valueOf(elem.getOccurances()), String.valueOf(elem.getProbablility()), String.valueOf(elem.getEntropy())));
+        }
+
 
         for (List<String> rowData : rows) {
             csvWriter.append(String.join(",", rowData));
