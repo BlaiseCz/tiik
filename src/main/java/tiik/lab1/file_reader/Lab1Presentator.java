@@ -17,10 +17,13 @@ public class Lab1Presentator {
         System.out.println("PRESENTING FILE \n" + filePath);
         String file = Reader.getContent(filePath);
         Map<Character, Integer> stringIntegerMap = Converter.countCharacters(file);
+        int length = Converter.countFileCharacters(file);
+
+        System.out.println("Entropia:");
+        System.out.println(EntropyCalculator.calculate(stringIntegerMap, length));
 
         System.out.println("Częstość wystąpień:");
-        Printer.print(stringIntegerMap);
-        System.out.println("\n\n\n");
+        Printer.print(EntropyCalculator.getCharacterDetailsList());
 
         String fileName = Path.of(filePath)
                        .getFileName()
