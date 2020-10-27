@@ -9,7 +9,7 @@ public class Converter {
     public static Map<Character, Integer> countCharacters(String text) {
         Map<Character, Integer> characterCounts = new HashMap<Character, Integer>();
         for (Character character : text.toCharArray()) {
-            if (character.equals('\n'))
+            if (character.equals('\n') || character.equals(' '))
                 continue;
 
 
@@ -17,6 +17,7 @@ public class Converter {
             if (characterCount == null) {
                 characterCount = 0;
             }
+
             characterCounts.put(character, characterCount + 1);
         }
 
@@ -28,6 +29,10 @@ public class Converter {
                 .entrySet()
                 .stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()));
+    }
+
+    public static int countFileCharacters(String text) {
+        return text.replace(" ", "").replace("\n", "").length();
     }
 
 }

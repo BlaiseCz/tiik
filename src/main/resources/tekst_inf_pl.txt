@@ -1,0 +1,65 @@
+Unified Modeling Language (UML, zunifikowany język modelowania) – język pół-formalny wykorzystywany do modelowania różnego rodzaju systemów, stworzony przez Grady’ego Boocha, Jamesa Rumbaugha oraz Ivara Jacobsona, obecnie rozwijany przez Object Management Group[1].
+Służy do modelowania dziedziny problemu (opisywania-modelowania fragmentu istniejącej rzeczywistości – na przykład modelowanie tego, czym zajmuje się jakiś dział w firmie) – w przypadku stosowania go do analizy oraz do modelowania rzeczywistości, która ma dopiero powstać – tworzy się w nim głównie modele systemów informatycznych. UML jest przeważnie używany wraz ze swoją reprezentacją graficzną – jego elementom przypisane są odpowiednie symbole wiązane ze sobą na diagramach.
+UML jest oficjalnie zdefiniowany przez Object Management Group (OMG) w tzw. metamodelu UML – Meta-Object Facility (MOF). Jak inne specyfikacje bazujące na Meta-Object Facility, metamodel UML i modele UML mogą być serializowane (zapisywane) w języku XML Metadata Interchange (XMI), opartym na standardzie XML. Choć UML był zaprojektowany, by definiować, wizualizować, konstruować i dokumentować systemy kładące nacisk na oprogramowanie, nie jest on ograniczony do modelowania oprogramowania. UML jest używany także do modelowania procesów biznesowych, inżynierii systemów i reprezentowania struktur organizacyjnych. Systems Modeling Language (SysML, Język Modelowania Systemów) jest językiem modelowania dla specyficznych zagadnień inżynierii systemów, zdefiniowanym jako profil UML 2.0. W UML-u do opracowywania formalnych ograniczeń można wykorzystać także język Object Constraint Language (OCL) opracowany pierwotnie przez IBM.
+System komputerowy (ang. computer system) – układ współdziałania dwóch składowych: sprzętu komputerowego oraz oprogramowania, działających coraz częściej również w ramach sieci komputerowej. Można mówić o następujących poziomach takiego systemu: sprzęt komputerowy, system operacyjny (oprogramowanie systemowe), oprogramowanie użytkowe (aplikacje). W pełni zautomatyzowany system komputerowy działa bez udziału człowieka.
+Organizacja systemu komputerowego to opis zależności sprzętowych, przedstawienie poszczególnych podzespołów komputera, który funkcjonuje według pewnych reguł i zasad, współpracuje ze sobą – by osiągnąć określony cel. Organizacja systemu komputerowego określa zasady, reguły, cele oraz sposób wspomagania działań poszczególnych podzespołów.
+Informatyka (niem. informatik, ang. computing) – nauka ścisła i techniczna o przetwarzaniu informacji oraz naturalnych i inżynierskich systemach obliczeniowych[1]. Zajmuje się badaniem natury i metodologii obliczeń, opisem procesów algorytmicznych oraz tworzeniem sprzętu i programów komputerowych[2][3][4].
+Istnieją różne próby definicji informatyki. Uniwersytet Edynburski definiuje ją jako naukę o budowie, zachowaniu i interakcji naturalnych i tworzonych systemów obliczeniowych, włączając w to aspekty obliczeniowe, kognitywne i społeczne[1]. Według Petera J. Denninga podstawowym pytaniem leżącym u podstaw informatyki jest: „Co można zautomatyzować?”[5]. Według teorii Stuarta C. Shapiro, informatyka jest nauką przyrodniczą, która bada procedury. Adam Olszewski wyróżnił pięć rodzajów obiektów, które są przedmiotem zainteresowania informatyki: funkcje efektywnie obliczalne, algorytmy, programy komputerowe, realizacje i maszyny[6]. Informatyka jest nauką o transferze i transformacji informacji, oraz związanymi z tym algorytmicznymi procesami[7] oraz systemami przetwarzającymi informacje składającymi się ze sprzętu i programów komputerowych[8]. Bada także przepływ i przetwarzanie informacji w organizmach i systemach społecznych, symulując je i wzorując się na nich[9][10]. Obejmuje teorię i praktykę tworzenia warstwy oprogramowania (ang. software) jak i warstwy sprzętowej (ang. hardware)[4]. Pierwsze algorytmy obliczeniowe powstały w okresie antyku, a pierwszy mechaniczny kalkulator w 1623[11]. Współczesna informatyka powstała w Niemczech, gdzie Konrad Zuse skonstruował pierwszy na świecie komputer. Stworzył on też pierwszy język programowania, a w swojej książce Rechnender Raum (pol. Przestrzeń Obliczeniowa) przedstawił hipotezę że działanie wszechświata może być zasymulowane[12]. W roku 2005,
+ w ACM Computing Curricula[13] zdefiniowano informatykę jako
+Ogólnie rzecz biorąc, możemy zdefiniować informatykę jako jakąkolwiek zorientowaną na cel działalność wymagającą, korzystającą z lub tworzącą komputery. W związku z tym informatyka obejmuje projektowanie i budowanie sprzętu i systemów oprogramowania do szerokiego zakresu celów; przetwarzanie, strukturyzację i zarządzanie różnymi rodzajami informacji; wykonywanie badań naukowych przy użyciu komputerów; sprawianie,
+ by systemy komputerowe zachowywały się inteligentnie; tworzenie i używanie mediów komunikacyjnych i rozrywkowych; znajdowanie i gromadzenie informacji związanych z jakimkolwiek określonym celem itd. Lista jest praktycznie nieskończona, a możliwości są ogromne.
+ Oprogramowanie (ang. software) – ogół informacji w postaci zestawu instrukcji, zaimplementowanych interfejsów i zintegrowanych danych przeznaczonych dla komputera do realizacji wyznaczonych celów. Celem oprogramowania jest przetwarzanie danych w wyznaczonym przez twórcę zakresie. Określenie „oprogramowanie” może funkcjonować jako synonim terminów „program komputerowy” oraz „aplikacja”, przy czym stosuje się je zazwyczaj na oznaczenie większych programów oraz ich zbiorów.
+ Oprogramowanie tworzą programiści w procesie programowania. Oprogramowanie jako przejaw twórczości jest chronione prawem autorskim, twórcy zezwalają na korzystanie z niego na warunkach określanych w licencji.
+ Oprogramowanie pisane jest zazwyczaj przy użyciu różnych języków programowania z wykorzystaniem algorytmów. Programy przekształcające oprogramowanie z postaci źródłowej na binarną to kompilatory. Niektóre rodzaje oprogramowania, np. napisane w całości w językach interpretowanych, mogą występować tylko w jednej postaci, spełniającej oba zadania (źródła i programu wykonywalnego).
+ Zarys (algorytm) tego, co byłoby pierwszym oprogramowaniem, napisała Ada Lovelace w XIX wieku dla planowanego Silnika Analitycznego. Jednak ani Silnik Analityczny, ani żadne oprogramowanie do niego nie zostały stworzone.
+
+ Pierwsza teoria na temat oprogramowania (przed stworzeniem dzisiejszych komputerów) została zaproponowana przez Alana Turinga w jego eseju opublikowanym w roku 1936[1].
+
+ Doprowadziło to ostatecznie do powstania bliźniaczych akademickich dziedzin informatyki i inżynierii oprogramowania, które zarówno badają oprogramowanie, jak i jego tworzenie. Informatyka jest bardziej teoretyczna (esej Turinga jest przykładem informatyki), natomiast inżynieria oprogramowania koncentruje się na bardziej praktycznych zagadnieniach.
+
+ Przed rokiem 1946 oprogramowanie jakie teraz znamy, czyli programy przechowywane w pamięci komputerów cyfrowych – jeszcze nie istniało.
+
+ Narzędzia do programowania[edytuj | edytuj kod]
+ Narzędzie programistyczne to również oprogramowanie w postaci programów lub aplikacji internetowych, które twórcy oprogramowania (zwani również programistami lub inżynierami oprogramowania) używają do tworzenia, debugowania, utrzymywania (tj. ulepszania lub naprawiania). Oprogramowanie jest napisane w jednym lub kilku językach programowania. Istnieje wiele języków programowania i każdy ma przynajmniej jedną implementację, z których każda składa się z własnego zestawu narzędzi programistycznych. Narzędzia te mogą być względnie samodzielnymi programami, takimi jak kompilatory, debuggery, interpretery, łączniki i edytory tekstu, które można łączyć w celu wykonania zadania. Mogą one również tworzyć zintegrowane środowisko programistyczne (IDE), które łączy w sobie wiele funkcji takich samodzielnych narzędzi.
+
+ Architektura[edytuj | edytuj kod]
+ Użytkownicy często postrzegają istotę oprogramowania inaczej niż programiści. Osoby korzystające z nowoczesnych komputerów ogólnego przeznaczenia (w przeciwieństwie do systemów wbudowanych, komputerów analogowych i superkomputerów) zazwyczaj widzą trzy warstwy oprogramowania wykonującego różnorodne zadania: platformę, aplikację i oprogramowanie użytkownika.
+
+ Oprogramowanie platformy
+ Platforma obejmuje oprogramowanie sprzętowe, sterowniki urządzeń, system operacyjny i zazwyczaj graficzny interfejs użytkownika, który pozwala użytkownikowi na interakcję z komputerem i jego urządzeniami peryferyjnymi.
+
+ Oprogramowanie napisane przez użytkownika
+ Systemy do projektowania dostosowane do specyficznych potrzeb użytkowników. Oprogramowanie użytkownika obejmuje szablony arkuszy kalkulacyjnych i szablony edytorów tekstów. Nawet filtry poczty e-mail są rodzajem oprogramowania użytkownika. Użytkownicy tworzą to oprogramowanie samodzielnie. W zależności od tego, w jakim stopniu oprogramowanie napisane przez użytkownika zostało zintegrowane z domyślnymi pakietami aplikacji, wielu użytkowników może nie być świadomych rozróżnienia między oryginalnymi pakietami, a tym, co zostało dodane przez współpracowników.
+
+ Wykonanie[edytuj | edytuj kod]
+ Oprogramowanie komputerowe musi zostać „załadowane” do pamięci komputera (np. dysku twardego lub pamięci). Proces ten obejmuje przekazywanie instrukcji z oprogramowania aplikacyjnego, poprzez oprogramowanie systemowe, do sprzętu, który ostatecznie otrzymuje instrukcję jako kod maszynowy. Każda instrukcja powoduje, że komputer przeprowadza operację przesuwając dane, wykonując obliczenia lub zmieniając sterowanie instrukcjami.
+
+ Przesyłanie danych odbywa się zwykle z jednego miejsca w pamięci do drugiego. Czasami obejmuje to przenoszenie danych między pamięcią a rejestrami, które umożliwiają szybki dostęp do danych w CPU. Przenoszenie danych, zwłaszcza dużych ich ilości, może być kosztowne. Czasami unika się tego, wykorzystując zamiast tego „wskaźniki” do danych. Obliczenia obejmują proste operacje, takie jak zwiększanie wartości zmiennego elementu danych. Bardziej skomplikowane obliczenia mogą obejmować wiele operacji.
+
+ Jakość i niezawodność[edytuj | edytuj kod]
+ Jakość oprogramowania jest bardzo istotna, szczególnie w przypadku oprogramowania komercyjnego i systemowego, takiego jak Microsoft Office, Microsoft Windows i Linux. Wadliwość oprogramowania może na przykład doprowadzić do awarii komputerowej.
+
+ Oprogramowanie często jest również ofiarą tak zwanego starzenia się, postępującej degradacji wydajności wynikającej z kombinacji niewidocznych błędów. Wiele błędów jest odkrywanych i eliminowanych (debugowanych) podczas testowania oprogramowania. Jednak testowanie oprogramowania rzadko – jeśli w ogóle – eliminuje każdy błąd. Niektórzy programiści mówią, że „każdy przetestowany program ma co najmniej jeszcze jeden błąd” (prawo Lubarskiego).
+
+ Oprogramowanie można testować za pomocą testów jednostkowych, testów regresji i innych metod, które są wykonywane ręcznie lub najczęściej automatycznie, ponieważ ilość kodu do przetestowania może być dość duża. Na przykład NASA ma wyjątkowo rygorystyczne procedury testowania oprogramowania dla wielu systemów operacyjnych i funkcji komunikacyjnych. Wiele operacji opartych na NASA wchodzi w interakcje i identyfikuje się nawzajem za pomocą programów sterujących. Dzięki temu wiele osób pracujących w NASA może sprawdzać i oceniać ogólnie systemy funkcjonalne. Programy zawierające oprogramowanie sterujące pozwalają na łatwiejsze współdziałanie inżynierii sprzętowej i operacji systemowych.
+
+ Rodzaje oprogramowania[edytuj | edytuj kod]
+ Oprogramowanie dzieli się ze względu na przeznaczenie:
+
+ oprogramowanie systemowe – realizujące funkcje konieczne dla działania systemu komputerowego,
+ oprogramowanie do tworzenia oprogramowania,
+ biblioteki programistyczne – oprogramowanie do wykorzystania przez inne programy,
+ oprogramowanie użytkowe – mające bezpośredni kontakt z użytkownikiem i realizujące usługi dla tego użytkownika za pomocą aplikacji, z technicznego punktu widzenia jest to oprogramowanie korzystające z usług m.in. systemu operacyjnego, a szerzej – oprogramowania systemowego.
+ Pojęcie oprogramowania systemowego jest znacznie szersze niż systemy operacyjne. W jego skład wchodzi też oprogramowanie serwerowe i każde oprogramowanie, z którym użytkownik nie ma bezpośredniej styczności.
+
+ Inne przykłady oprogramowania:
+
+ DTP
+ edytor grafiki
+ edytor tekstu
+ oprogramowanie układowe
+ gry komputerowe
+ oprogramowanie pośredniczące
+ system ekspertowy
+ system zarządzania bazą danych (DBMS)
+ wirus komputerowy
