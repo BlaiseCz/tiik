@@ -8,7 +8,7 @@ import java.nio.file.Path;
 public class Main {
     public static void main(String...args) throws
                                            IOException {
-        final String path = "/Users/krzysztofczarnecki/Documents/GitHub/tiik/xd.txt";
+        final String path = "xd.txt";
         String src = Files.readString(Path.of(path));
 
 
@@ -22,7 +22,7 @@ public class Main {
         }
 
 
-        File compressedFile = new File("/Users/krzysztofczarnecki/Documents/GitHub/tiik/thefilename");
+        File compressedFile = new File("thefilename");
         InputStream compressedStream = new FileInputStream(compressedFile);
         ByteArrayOutputStream uncompress = new Lzss(compressedStream).uncompress();
 
