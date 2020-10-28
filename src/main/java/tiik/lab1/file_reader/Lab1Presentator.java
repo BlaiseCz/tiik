@@ -1,17 +1,15 @@
 package tiik.lab1.file_reader;
 
-import lombok.SneakyThrows;
-
-import java.io.FileWriter;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class Lab1Presentator {
-
+    private CsvSaver csvSaver = new CsvSaver();
 
     public void present(String filePath) {
-        System.out.println("PRESENTING FILE \n" + filePath);
+        System.out.println("\n\n\nPRESENTING FILE \n" + filePath);
         String file = Reader.getContent(filePath);
         Map<Character, Integer> stringIntegerMap = Converter.countCharacters(file);
         int length = Converter.countFileCharacters(file);
@@ -23,11 +21,8 @@ public class Lab1Presentator {
         List<CharacterDetails> characterDetailsList = EntropyCalculator.getCharacterDetailsList();
         Printer.print(characterDetailsList);
 
-        String fileName = Path.of(filePath)
-                .getFileName()
-                .toString()
-                .split("\\.")[0];
-        saveToCSV(characterDetailsList, fileName);
+        String fileName = getFileNameFromPath(filePath);
+        csvSaver.saveToCSV(characterDetailsList, fileName);
     }
 
     public void present(String... filePaths) {
@@ -35,28 +30,10 @@ public class Lab1Presentator {
                 .forEach(this::present);
     }
 
-    @SneakyThrows
-    private void saveToCSV(List<CharacterDetails> characterDetailsList, String fileName) {
-        List<List<String>> rows = new ArrayList<>();
-        rows.add(Arrays.asList("Znak", "Ilość wystąpień", "Prawdopodobieństwo", "Entropia"));
-
-        Comparator<CharacterDetails> compareByCharacter = Comparator.comparing(CharacterDetails::getCharacter);
-        characterDetailsList.sort(compareByCharacter);
-
-        String resultFileName = String.format("%s_result.csv", fileName);
-        FileWriter csvWriter = new FileWriter(resultFileName);
-
-        for (CharacterDetails elem : characterDetailsList) {
-            rows.add(Arrays.asList(String.valueOf(elem.getCharacter()), String.valueOf(elem.getOccurances()), String.valueOf(elem.getProbablility()), String.valueOf(elem.getEntropy())));
-        }
-
-
-        for (List<String> rowData : rows) {
-            csvWriter.append(String.join(",", rowData));
-            csvWriter.append("\n");
-        }
-
-        csvWriter.flush();
-        csvWriter.close();
+    private String getFileNameFromPath(String filePath) {
+        return Path.of(filePath)
+            .getFileName()
+            .toString()
+            .split("\\.")[0];
     }
 }
