@@ -23,6 +23,7 @@ public class TiikCompressor implements FilesCompressor {
                                                        ZipException,
                                                        IOException {
         for (String path : paths) {
+            log.info("Compressing {}", path);
             FileInputStream fileToCompress = readFile(path);
             ByteArrayOutputStream compressedFile = new Lzss(fileToCompress).compress();
             saveToFile(compressedFile, getTmpFileName(path));
@@ -40,10 +41,11 @@ public class TiikCompressor implements FilesCompressor {
         String[] unpackedNames = getFilesFromDirectory(destination); // wez wszystkie pliki z tego folderu
 
         for (String name: unpackedNames) {
-            FileInputStream fileToUncompress = readFile(destination + "/" + name);
+            log.info("Decompressing {}", name);
+            FileInputStream fileToUncompress = readFile(mergeFolderWithName(destination, name));
             ByteArrayOutputStream uncompress = new Lzss(fileToUncompress).uncompress();
             saveToFile(uncompress, getFileNameFromTmp(destination, name));
-            deleteTmpFiles(destination + "/" + name);
+            deleteTmpFiles(mergeFolderWithName(destination, name));
         }
     }
 
@@ -86,7 +88,11 @@ public class TiikCompressor implements FilesCompressor {
     }
 
     private String getFileNameFromTmp(String destination, String name) {
-        return String.format("%s/%s", destination, name.substring(TMP_FILE_PREFIX.length()));
+        return mergeFolderWithName(destination, name.substring(TMP_FILE_PREFIX.length()));
+    }
+
+    private String mergeFolderWithName(String destination, String name) {
+        return String.format("%s/%s", destination, name);
     }
 
     private String[] getTmpFileNames(String...paths) {

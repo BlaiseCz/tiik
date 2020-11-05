@@ -17,6 +17,11 @@ public class DoNthParamService extends ParamService {
         log.info("########################################");
         log.info("");
         log.info("########################################");
+        log.info("#####         COMPRESS ALL         #####");
+        log.info("##### java -jar -ca <file_name> <dir_to_pack_files> #####");
+        log.info("########################################");
+        log.info("");
+        log.info("########################################");
         log.info("#####        UNCOMPRESS            #####");
         log.info("##### java -jar -dc <file_name_to_uncompress> <destingation_folder> #####");
         log.info("########################################");

@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 @AllArgsConstructor
 public enum RunParams {
     COMPRESS("-c", new CompressParamService()),
+    COMPRESS_ALL("-ca", new CompressAllParamsService()),
     UNCOMPRESS("-dc", new UncompressParamService()),
     UNKNOWN("", new DoNthParamService());
 

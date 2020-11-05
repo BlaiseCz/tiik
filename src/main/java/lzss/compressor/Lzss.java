@@ -155,7 +155,7 @@ public class Lzss extends AbstractCompressor {
     }
 
     public ByteArrayOutputStream uncompress(int expectedSize) throws IOException {
-        out = new ByteArrayOutputStream(expectedSize);
+        out = new ByteArrayOutputStream(expectedSize); // TODO: 2020-11-06 out of memeory dla duzego pliku
 
         byte[] c = new byte[MAX_STORE_LENGTH]; // an array of chars
         byte flags; // 8 bits of flags
