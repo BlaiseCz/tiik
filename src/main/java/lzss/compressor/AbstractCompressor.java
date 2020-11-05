@@ -1,4 +1,4 @@
-package lzss;
+package lzss.compressor;
 
 import java.io.InputStream;
 

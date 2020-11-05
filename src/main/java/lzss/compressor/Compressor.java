@@ -1,11 +1,11 @@
-package lzss;
+package lzss.compressor;
 
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
- * A compressor provides the ability to compress and uncompress block text.
+ * A packer provides the ability to compress and uncompress block text.
  * Implementing classes are expected to provide a way to supply the input.
  *
  * @see gnu.lgpl.License for license details.<br>

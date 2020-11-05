@@ -1,10 +1,15 @@
 package lzss;
 
+import lzss.compressor.Lzss;
+import lzss.compressor.TiikCompressor;
+import net.lingala.zip4j.exception.ZipException;
+
 import java.io.*;
 
 public class Main {
     public static void main(String...args) throws
-                                           IOException {
+                                           IOException,
+                                           ZipException {
         final String path = "xd.txt";
         final String compressedFileName = "compressed";
 
@@ -18,6 +23,12 @@ public class Main {
 
 
         saveToFile(uncompress, "odkompresowane.txt");
+
+        new TiikCompressor().compress("/Users/krzysztofczarnecki/Documents/GitHub/tiik/src/main/resources/tekst_eng.txt",
+                                      "/Users/krzysztofczarnecki/Documents/GitHub/tiik/src/main/resources/tekst_inf_pl.txt",
+                                      "/Users/krzysztofczarnecki/Documents/GitHub/tiik/src/main/resources/tekst_pl.txt");
+
+//        new TiikCompressor().uncompress("test/xd");
 
     }
 
