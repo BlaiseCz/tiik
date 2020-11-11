@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class Converter {
     public static Map<Character, Integer> countCharacters(String text) {
-        Map<Character, Integer> characterCounts = new HashMap<Character, Integer>();
+        Map<Character, Integer> characterCounts = initMap();
         for (Character character : text.toCharArray()) {
             if (character.equals('\n') || character.equals(' '))
                 continue;
@@ -35,4 +35,14 @@ public class Converter {
         return text.replace(" ", "").replace("\n", "").length();
     }
 
+    private static Map<Character, Integer> initMap() {
+        HashMap<Character, Integer> chars = new HashMap<>();
+        char[] charactersToAdd = "!'(),-.0123456789:;>?ABCDEFGHIJKLMNOPRSTUWYZ[]abcdefghijklmnopqrstuvwxyz«»éóúąćęłńŚśźŻż—’”„… !'(),-.0123456789:;>?ABCDEFGHIJKLMNOPRSTUWXYZ[]abcdefghijklmnopqrstuvwxyz|«»éóúąćęłńŚśźŻż–—’”„…".toCharArray();
+
+        for (Character character : charactersToAdd) {
+            chars.put(character, 0);
+        }
+
+        return chars;
+    }
 }

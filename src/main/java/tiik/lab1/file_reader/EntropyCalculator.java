@@ -17,14 +17,17 @@ public class EntropyCalculator {
 
     private static double calculateEntropy(List<CharacterDetails> list , int length) {
 
-        double entropy = 0.0;
+        double entropy = 0.0d;
         for(CharacterDetails characterDetails : list) {
             double buf = -characterDetails.getProbablility() * (log2(characterDetails.getProbablility()));
             characterDetails.setEntropy(buf);
             entropy += buf;
         }
 
-        return  entropy;
+        if (String.valueOf(entropy).equals("NaN"))
+            return 0;
+
+        return entropy;
     }
 
     private static List<CharacterDetails> getCharacterDetails(Map<Character, Integer> characterIntegerMap, double length) {

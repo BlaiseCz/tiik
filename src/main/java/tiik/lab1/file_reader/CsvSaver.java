@@ -3,6 +3,7 @@ package tiik.lab1.file_reader;
 import lombok.SneakyThrows;
 
 import java.io.FileWriter;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -39,11 +40,16 @@ public class CsvSaver {
     }
 
     private List<String> prepareRow(CharacterDetails elem) {
+        double entropia = 0;
+
+        if (!String.valueOf(elem.getEntropy()).equals("NaN"))
+            entropia = elem.getEntropy();
+
         return Arrays.asList(
                 String.valueOf(elem.getCharacter()),
                 String.valueOf(elem.getOccurances()),
-                String.valueOf(elem.getProbablility()),
-                String.valueOf(elem.getEntropy()));
+                BigDecimal.valueOf(elem.getProbablility()).toPlainString().replace(".", ","),
+                BigDecimal.valueOf(entropia).toPlainString().replace(".", ","));
     }
 
     private String joinRowData(List<String> rowData) {
